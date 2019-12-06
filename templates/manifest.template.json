@@ -1,0 +1,22 @@
+{
+    "name": "Music Downloader",
+    "short_name": "Music Downloader",
+    "description": "Music Downloader",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "browser_action": {},
+    "background": {
+        "scripts": ["background/background.js"]
+    },
+    "content_scripts" : [
+        {
+            "matches": [ "<all_urls>" ],
+            "css": ["/static/css/app.css"],
+            "js": ["/static/js/app.js"]
+        }
+    ],
+    "web_accessible_resources":[
+        "/static/css/app.css"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

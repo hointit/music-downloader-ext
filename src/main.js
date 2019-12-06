@@ -5,9 +5,13 @@ import App from './App'
 
 Vue.config.productionTip = false
 
+const app = document.createElement('div');
+
+document.body.appendChild(app);
+
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: app,
   components: { App },
   template: '<App/>'
 })

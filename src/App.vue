@@ -18,11 +18,14 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 20px;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 2147483647;
+  background-color: white;
+  box-shadow: 0px 0px 5px #0000009e;
 }
 </style>
