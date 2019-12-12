@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <ListSong/>
+    <ComponentTest/>
   </div>
 </template>
 
 <script>
-import ListSong from './components/ListSong'
+import ConMatViet from './components/ConMatViet'
+import ChiaSeNhac from './components/ChiaSeNhac'
+
+var componentLoad = ConMatViet;
+
+if(window.location.hostname === "chiasenhac.vn"){
+  componentLoad = ChiaSeNhac;
+}
 
 export default {
   name: 'App',
   components: {
-    ListSong
+    ComponentTest: componentLoad,
   }
 }
 </script>

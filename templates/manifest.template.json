@@ -10,13 +10,20 @@
     },
     "content_scripts" : [
         {
-            "matches": [ "<all_urls>" ],
+            "matches": ["https://*.conmatviet.com/*", "https://*.chiasenhac.vn/*"],
             "css": ["/static/css/app.css"],
             "js": ["/static/js/app.js"]
         }
     ],
     "web_accessible_resources":[
         "/static/css/app.css"
+    ],
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "activeTab",
+        "downloads",
+        "background"
     ],
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
